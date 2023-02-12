@@ -10,13 +10,27 @@ public class BigOSingleLoop {
         System.out.println("Input size n is = "+ n);
 
         // Task 1 Single Loop................... O(n)
+
         startTime=System.currentTimeMillis();
         for(int i=0;i<n;i++){
             numberOfOperations+=1;
-            endTime=System.currentTimeMillis();
-        }
 
+
+
+        }
+        endTime=System.currentTimeMillis();
+        System.out.println("Number Of Operations = " + numberOfOperations+" in "+(endTime-startTime)+" miliseconds");
+        numberOfOperations=0;
         // Task 2 Nested Loops...................
+        startTime=System.currentTimeMillis();
+        for (int i = 0; i <n ; i++) {
+            for (int j = 0; j <n ; j++) {
+                numberOfOperations+=1;
+            }
+        }
+        endTime=System.currentTimeMillis();
+        System.out.println("Number Of Operations = " + numberOfOperations+" in "+(endTime-startTime)+" miliseconds");
+
 
         // Task 2 End...................
 // ......................................................................................................
